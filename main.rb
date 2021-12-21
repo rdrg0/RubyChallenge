@@ -1,5 +1,14 @@
 require_relative "get_max_value"
 
-puts "Ingresa un string"
-string = gets.chomp
-puts "El valor maximo para el string ingresado es #{get_max_value(string)}"
+
+input = ''
+until input == "EXIT"
+  puts "Ingresa un string para calcular su valor maximo"
+  puts "(para salir escribe EXIT)"
+  input = gets.chomp.upcase
+  unless input == "EXIT" 
+    puts ''
+    puts "El valor maximo para '#{input}' es #{get_max_value(input)}" 
+    puts ''
+  end
+end
